@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Villa Lumen am See · Maison Vellière Private Estates</title>
+<meta name="description" content="Villa Lumen: moderne Architekturvilla aus Sichtbeton, Glas und Marmor mit 25-m-Infinity-Pool. Ein filmischer Rundgang durch sieben Räume.">
+<meta name="theme-color" content="#0d0c0a">
+<meta property="og:title" content="Villa Lumen am See">
+<meta property="og:description" content="Ein filmischer Rundgang durch eine Architekturvilla aus Beton, Glas und Marmor.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://d8j0ntlcm91z4.cloudfront.net" crossorigin>
+<link rel="preconnect" href="https://d2ol7oe51mr4n9.cloudfront.net" crossorigin>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip" href="#expose">Zum Exposé springen</a>
+
+<header class="nav" id="nav">
+  <a class="brand" href="#top" aria-label="Maison Vellière, zum Anfang">
+    <span class="brand-mark" aria-hidden="true">MV</span>
+    <span class="brand-name">Maison Vellière<small>Private Estates</small></span>
+  </a>
+  <nav class="nav-links" aria-label="Hauptnavigation">
+    <a href="#film">Rundgang</a>
+    <a href="#expose">Exposé</a>
+    <a href="#galerie">Galerie</a>
+    <a href="#kontakt" class="nav-cta">Besichtigung anfragen</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- ============ FILM: scroll-driven room tour ============ -->
+  <section class="film" id="film" aria-label="Filmischer Rundgang durch die Villa">
+    <div class="film-sticky">
+      <div class="film-media">
+        <img class="film-poster" id="filmPoster" alt="Villa Lumen: Ankunft über die Auffahrt aus Kalkstein, Sichtbeton-Auskragung und Walnuss-Pivot-Tür" fetchpriority="high">
+        <video class="film-video" id="filmVideo" muted playsinline preload="none" aria-hidden="true" tabindex="-1"></video>
+        <div class="film-shade" aria-hidden="true"></div>
+      </div>
+
+      <!-- Intro title, fades out once scrolling begins -->
+      <div class="film-intro" id="filmIntro">
+        <p class="eyebrow">Oberbayern · Seeufer · Neubau 2025</p>
+        <h1 class="display">Villa Lumen<em>am See</em></h1>
+        <p class="lead">Beton, Glas und Marmor. Sieben Räume, ein durchgehender Blick auf das Wasser.</p>
+        <div class="loader" id="loader" role="status" aria-live="polite">
+          <span class="loader-bar"><span id="loaderFill"></span></span>
+          <span class="loader-text" id="loaderText">Rundgang wird geladen</span>
+        </div>
+        <p class="scroll-hint" id="scrollHint" aria-hidden="true">
+          <span>Scrollen, um die Villa zu betreten</span>
+          <svg width="14" height="22" viewBox="0 0 14 22" fill="none"><rect x="1" y="1" width="12" height="20" rx="6" stroke="currentColor" stroke-width="1.2"/><circle class="wheel" cx="7" cy="7" r="1.6" fill="currentColor"/></svg>
+        </p>
+      </div>
+
+      <!-- Room chapter cards (filled by main.js) -->
+      <div class="chapters" id="chapters" aria-live="polite"></div>
+
+      <!-- Progress rail -->
+      <nav class="rail" id="rail" aria-label="Räume im Rundgang"></nav>
+
+      <div class="timecode" aria-hidden="true"><span id="tcRoom">01</span><span class="tc-sep"></span><span>07</span></div>
+    </div>
+  </section>
+
+  <!-- ============ EXPOSÉ ============ -->
+  <section class="section expose" id="expose">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Exposé</p>
+        <h2 class="h2">Ein Haus, das sich<br><em>zum See öffnet</em></h2>
+      </div>
+      <div class="expose-grid">
+        <p class="expose-text">
+          Villa Lumen liegt erhöht auf einem Hanggrundstück über dem See. Der Entwurf staffelt drei auskragende Baukörper aus brettgeschaltem Sichtbeton übereinander. Jeder Raum öffnet sich über rahmenlose Verglasung nach Westen, zum Wasser und zur Abendsonne. Innen treffen Calacatta-Marmor, Travertin, geräucherte Eiche und Walnuss auf die warme Maserung des Betons.
+        </p>
+        <dl class="facts">
+          <div><dt>Wohnfläche</dt><dd>780<span>m²</span></dd></div>
+          <div><dt>Grundstück</dt><dd>4.200<span>m²</span></dd></div>
+          <div><dt>Zimmer</dt><dd>9</dd></div>
+          <div><dt>Schlafzimmer</dt><dd>5</dd></div>
+          <div><dt>Bäder</dt><dd>6</dd></div>
+          <div><dt>Infinity-Pool</dt><dd>25<span>m</span></dd></div>
+          <div><dt>Baujahr</dt><dd>2025</dd></div>
+          <div><dt>Energieklasse</dt><dd>A+</dd></div>
+        </dl>
+      </div>
+      <div class="price">
+        <span>Kaufpreis</span>
+        <strong>Auf Anfrage</strong>
+        <a class="btn" href="#kontakt">Exposé anfordern</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MATERIALS ============ -->
+  <section class="section materials" id="materialien">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Material &amp; Detail</p>
+        <h2 class="h2">Fünf Materialien,<br><em>präzise gefügt</em></h2>
+      </div>
+      <ol class="mat-list">
+        <li><span class="swatch sw-concrete" aria-hidden="true"></span><div><h3>Brettgeschalter Sichtbeton</h3><p>Warmgrau pigmentiert, mit sichtbarer Holzmaserung der Schalung. Tragende Struktur und Oberfläche zugleich.</p></div></li>
+        <li><span class="swatch sw-viola" aria-hidden="true"></span><div><h3>Calacatta Viola</h3><p>Buchgespiegelte Platten mit bordeaux-grauer Äderung im Foyer, auf der Kücheninsel und im Spa.</p></div></li>
+        <li><span class="swatch sw-marquina" aria-hidden="true"></span><div><h3>Nero Marquina</h3><p>Monolithischer, schwebender Kaminkörper im Wohnbereich mit linearer Flamme.</p></div></li>
+        <li><span class="swatch sw-travertine" aria-hidden="true"></span><div><h3>Travertin &amp; Kalkstein</h3><p>Massive Treppenstufen, Beistelltische und großformatige Terrassenplatten, innen wie außen durchlaufend.</p></div></li>
+        <li><span class="swatch sw-walnut" aria-hidden="true"></span><div><h3>Walnuss &amp; geräucherte Eiche</h3><p>Die 4 m hohe Pivot-Tür, grifflose Küchenfronten und kannelierte Waschtische.</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ GALLERY ============ -->
+  <section class="section gallery" id="galerie">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Galerie</p>
+        <h2 class="h2">Räume im <em>Detail</em></h2>
+      </div>
+      <div class="gallery-grid" id="galleryGrid"></div>
+    </div>
+  </section>
+
+  <!-- ============ LOCATION ============ -->
+  <section class="section location">
+    <div class="wrap location-grid">
+      <div>
+        <p class="eyebrow">Lage</p>
+        <h2 class="h2">Erhöht über dem <em>Westufer</em></h2>
+      </div>
+      <ul class="distances">
+        <li><span>Privater Seezugang</span><b>250 m</b></li>
+        <li><span>Golfclub</span><b>8 min</b></li>
+        <li><span>München Zentrum</span><b>45 min</b></li>
+        <li><span>Flughafen München</span><b>60 min</b></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="section contact" id="kontakt">
+    <div class="wrap contact-grid">
+      <div>
+        <p class="eyebrow">Private Besichtigung</p>
+        <h2 class="h2">Diskret. <em>Persönlich.</em></h2>
+        <p class="contact-text">Besichtigungen finden ausschließlich nach Bonitätsnachweis und in Begleitung statt. Wir melden uns innerhalb von 24 Stunden.</p>
+        <div class="agent">
+          <span class="agent-mark" aria-hidden="true">MV</span>
+          <div><strong>Maison Vellière Private Estates</strong><span>Ihr Ansprechpartner für Villa Lumen</span></div>
+        </div>
+      </div>
+      <form class="form" id="contactForm" novalidate>
+        <div class="field">
+          <label for="f-name">Name</label>
+          <input id="f-name" name="name" type="text" autocomplete="name" required>
+          <p class="field-error" id="e-name"></p>
+        </div>
+        <div class="field">
+          <label for="f-mail">E-Mail</label>
+          <input id="f-mail" name="email" type="email" autocomplete="email" required>
+          <p class="field-error" id="e-mail"></p>
+        </div>
+        <div class="field">
+          <label for="f-phone">Telefon <span class="opt">(optional)</span></label>
+          <input id="f-phone" name="phone" type="tel" autocomplete="tel">
+        </div>
+        <div class="field">
+          <label for="f-msg">Nachricht</label>
+          <textarea id="f-msg" name="message" rows="4">Ich interessiere mich für eine private Besichtigung von Villa Lumen.</textarea>
+        </div>
+        <button class="btn btn-solid" type="submit">Anfrage senden</button>
+        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <span>© 2026 Maison Vellière Private Estates · Designvorschau</span>
+    <span>Alle Raumansichten und der Rundgang sind KI-generierte Visualisierungen. Objekt, Makler und Angaben sind fiktiv.</span>
+  </div>
+</footer>
+
+<dialog class="lightbox" id="lightbox" aria-label="Bildansicht">
+  <button class="lb-close" id="lbClose" aria-label="Schließen">
+    <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 4l12 12M16 4L4 16" stroke="currentColor" stroke-width="1.5"/></svg>
+  </button>
+  <img id="lbImg" alt="">
+  <p id="lbCap"></p>
+</dialog>
+
+<script src="media.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
